@@ -1,0 +1,55 @@
+#include <windows.h>
+#include <commctrl.h>
+#include <richedit.h>
+#include "resource.h"
+
+//
+// Dialog resources
+//
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+IDD_MAIN DIALOG 260, 200, 140, 80
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP | WS_SYSMENU
+CAPTION "Fahrenheit to Celsius"
+FONT 8, "Ms Shell Dlg"
+{
+    DEFPUSHBUTTON   "&Convert", IDC_CONVERT, 9, 54, 40, 15
+    PUSHBUTTON      "E&xit", IDC_EXIT, 93, 54, 40, 15
+    PUSHBUTTON      "C&lear", IDC_CLEAR, 51, 54, 40, 15
+    EDITTEXT        IDC_TEMPERATURE, 83, 7, 50, 15, ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_RESULT, 83, 37, 50, 15, ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Temperature:", IDC_STATIC1, 38, 10, 43, 8, SS_LEFT
+    AUTORADIOBUTTON "To Celsius", IDC_CELSIUS, 24, 24, 49, 8
+    AUTORADIOBUTTON "To Fahrenheit", IDC_FAHRENHEIT, 78, 24, 55, 8
+    LTEXT           "Result:", IDC_STATIC2, 58, 37, 23, 8, SS_LEFT
+}
+
+//
+// Version Information resources
+//
+1 VERSIONINFO
+    FILEVERSION     0,0,0,0
+    PRODUCTVERSION  0,0,0,0
+    FILEOS          VOS_UNKNOWN
+    FILETYPE        VFT_UNKNOWN
+    FILESUBTYPE     VFT2_UNKNOWN
+    FILEFLAGSMASK   0x00000000
+    FILEFLAGS       0x00000000
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "0c090025"
+        {
+            VALUE "CompanyName", "Mark Albanese"
+            VALUE "FileDescription", "Fahrenheit to Celsius Converter"
+            VALUE "FileVersion", "Version 1.0"
+            VALUE "InternalName", "Fahrenheit to Celsius"
+            VALUE "OriginalFilename", "FtoC_Winapi.exe"
+            VALUE "ProductName", "Fahrenheit to Celsius Converter"
+            VALUE "ProductVersion", "Version 1.0"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0C09, 0x0025
+    }
+}
